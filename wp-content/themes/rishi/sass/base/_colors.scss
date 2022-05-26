@@ -1,0 +1,92 @@
+h1,h2,h3,h4,h5,h6,.single .entry-header .entry-title,.page .entry-header .entry-title,.blog-post-lay .entry-content-main-wrap .entry-title,.rishi-post .entry-title {
+    color: var(--genheadingColor);
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--textSelectionColor);
+    background: var(--textSelectionHoverColor);
+}
+
+::selection {
+    color: var(--textSelectionColor);
+    background: var(--textSelectionHoverColor);
+}
+
+.header-search-btn svg path {
+    fill: var(--primaryColor), var(--icon-color);
+}
+
+//Link Colors
+.single .entry-header .post-meta-inner a,.page .entry-header .post-meta-inner a {
+    color: var(--primaryColor);
+    &:hover{
+        color: var(--genLinkHoverColor);
+    }
+}
+
+.blog-post-lay .entry-content-main-wrap .entry-title:hover{
+    color: var(--genLinkHoverColor);
+}
+
+.button {
+    color: var(--btnTextColor);
+    background: var(--btnBgColor);
+    border-color: var(--btnBorderColor);
+    &:hover {
+        color: var(--btnTextHoverColor);
+        background-color: var(--btnBgHoverColor);
+        border-color: var(--btnBorderHoverColor);
+    }
+}
+
+/*** Theme color For editor post ********/
+
+.has-palette-color-1-color {
+    color: var(--paletteColor1);
+}
+.has-palette-color-2-color {
+    color: var(--paletteColor2);
+}
+.has-palette-color-3-color {
+    color: var(--paletteColor3);
+}
+.has-palette-color-4-color {
+    color: var(--paletteColor4);
+}
+.has-palette-color-5-color {
+    color: var(--paletteColor5);
+}
+.has-palette-color-6-color {
+    color: var(--paletteColor6);
+}
+.has-palette-color-7-color {
+    color: var(--paletteColor7);
+}
+.has-palette-color-8-color {
+    color: var(--paletteColor8);
+}
+.has-palette-color-1-background-color {
+    background-color: var(--paletteColor1);
+}
+.has-palette-color-2-background-color {
+    background-color: var(--paletteColor2);
+}
+.has-palette-color-3-background-color {
+    background-color: var(--paletteColor3);
+}
+.has-palette-color-4-background-color {
+    background-color: var(--paletteColor4);
+}
+.has-palette-color-5-background-color {
+    background-color: var(--paletteColor5);
+}
+.has-palette-color-6-background-color {
+    background-color: var(--paletteColor6);
+}
+.has-palette-color-7-background-color {
+    background-color: var(--paletteColor7);
+}
+.has-palette-color-8-background-color {
+    background-color: var(--paletteColor8);
+}

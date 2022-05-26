@@ -1,0 +1,190 @@
+// /*===============================
+// Bottom Footer
+// ==============================*/
+// .site-footer{
+//     .footer-bottom-main{
+//         .rishi-footer-btn-adjst{
+//             background: var(--primaryColor);
+//             border-top: 1px solid rgba(255,255,255,0.1);
+//             font-size: 0.777778em;
+//             padding: 25px 0 30px;
+//             color: rgba(255,255,255,0.6);
+//             letter-spacing: 0.6px;
+            
+//             a{
+//                 color: rgba(255,255,255,0.6);
+//                 @include transition(all ease 0.3s);
+                
+//                 &:hover{
+//                     color: #FFF;
+//                 }
+//             }
+
+//             .rishi-flex{
+//                 -webkit-align-items: center;
+//                 align-items: center;
+//             }
+//             .widget.widget_nav_menu{
+//                 margin-bottom: 0;
+                
+//                 ul{
+//                     text-align: right;
+//                 }
+//             }
+//             .menu{
+//                 margin: 0;
+//                 padding: 0;
+//                 list-style: none;
+//                 text-align: right;
+//                 @include media(sm){
+//                     text-align: left;
+//                     margin-top: 10px;
+//                 }
+
+//                 li{
+//                     display: inline-block;
+//                     padding: 0 0;
+//                     margin: 0;
+                    
+//                     &:first-child{
+//                         &:before{
+//                             display: none;
+//                         }
+//                     }
+                    
+//                     &:before{
+//                         content: "";
+//                         display: inline-block;
+//                         height: 14px;
+//                         width: 2px;
+//                         margin: 0 12px 0 8px;
+//                         vertical-align: middle;
+//                         background: rgba(255,255,255,0.6);
+//                         margin-top: -2px;
+//                     }
+
+//                     &:first-child{
+//                         padding-left: 0;
+//                     }
+
+//                     &:last-child{
+//                         padding-right: 0;
+//                     }
+//                     @include media(sm){
+//                         padding-left: 0;
+//                         padding-right: 20px;
+//                     }
+//                 }
+//             }
+//         }
+//         .rishi-btm-foot-col{
+//             padding: 0 15px;
+
+//             a{
+//                 text-decoration: none;
+//             }
+//         }
+
+//         .widget{
+//             font-size: 18px;
+//             width: 100%;
+//             li{
+//                 color: rgba(255,255,255,0.5);
+//                 font-size: 15px;
+//                 a{
+//                     color: rgba(255,255,255,0.5);
+//                     font-size: 1em;
+//                 }
+//             }
+//             a{
+//                 color: rgba(255,255,255,0.5);
+//             }
+//             .widget-title{
+//                 font-size: 1.1111em;
+//                 color: rgba(255,255,255,0.9);
+//             }
+//             &.widget_text{
+//                 p{
+//                     font-size: 0.83333em;
+//                 }
+//             }
+//             .custom-html-widget{
+//                 font-size: 0.83333em;
+//             }
+//             &.widget_categories{
+//                 li a{
+//                     color: #FFF;
+//                 }
+//             }
+//             &.widget_archive{
+//                 ul{
+//                     li{
+//                         display: flex;
+//                         -webkit-align-items: center;
+//                         align-items: center;
+//                         -webkit-justify-content: space-between;
+//                         justify-content: space-between;
+//                     }
+//                     padding: 36px 30px;
+//                     background: rgba(255,255,255,0.1);
+//                 }
+//             }
+//             &.widget_nav_menu{
+//                 ul{
+//                     text-align: left;
+//                 }
+//             }
+//             &.widget_calendar{
+//                 .calendar_wrap{
+//                     th,
+//                     td{
+//                         color: rgba(255,255,255,0.5);
+//                     }
+//                     .wp-calendar-nav-next a{
+//                         &:after{
+//                             content: "";
+//                             display: inline-block;
+//                             width: 20px;
+//                             height: 15px;
+//                             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.562' height='13.244' viewBox='0 0 17.562 13.244'%3E%3Cg id='Group_762' data-name='Group 762' transform='translate(0.75 1.061)'%3E%3Cpath id='Path_4' data-name='Path 4' d='M3290.465,368.331l5.561,5.561-5.561,5.561' transform='translate(-3280.275 -368.331)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3Cline id='Line_5' data-name='Line 5' x2='14.523' transform='translate(0 6)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat;
+//                             -webkit-background-size: 17px;
+//                             -o-background-size: 17px;
+//                             background-size: 17px;
+//                         }
+//                     }
+//                     .wp-calendar-nav-prev a{
+//                         &:after{
+//                             content: "";
+//                             display: inline-block;
+//                             width: 20px;
+//                             height: 15px;
+//                             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.333' height='13.244' viewBox='0 0 16.333 13.244'%3E%3Cg id='Group_763' data-name='Group 763' transform='translate(1.061 1.061)'%3E%3Cpath id='Path_5' data-name='Path 5' d='M3296.026,368.331l-5.561,5.561,5.561,5.561' transform='translate(-3290.464 -368.331)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3Cline id='Line_6' data-name='Line 6' x1='14.523' transform='translate(0 6)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat;
+//                             -webkit-background-size: 17px;
+//                             -o-background-size: 17px;
+//                             background-size: 17px;
+//                         }
+//                     }
+//                 }
+//                 caption{
+//                     background: rgba(255,255,255,0.1);
+//                     color: rgba(255,255,255,0.8);
+//                 }
+//             }
+//             &.widget_categories{
+//                 ul{
+//                     padding: 36px 30px;
+//                     background: rgba(255,255,255,0.1);
+//                     li{
+//                         display: flex;
+//                         -webkit-justify-content: space-between;
+//                         justify-content: space-between;
+//                     }
+//                     ul{
+//                         background: none;
+//                         padding: 25px 25px 0;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,422 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
+}
+
+hr {
+    border: none;
+    background: var(--genborderColor);
+    height: 1px;
+    margin-bottom: 1.5em;
+}
+
+ul {
+    list-style-type: var(--listStyleType, disc);
+    margin-bottom: var(--contentSpacing);
+    padding-left: var(--listIndent);
+}
+
+ol {
+    list-style-type: var(--listStyleType, decimal);
+    margin-bottom: var(--contentSpacing);
+    padding-left: var(--listIndent);
+}
+
+li>ul,li>ol {
+    margin-bottom: 0;
+    // margin-left: 1.5em;
+}
+
+ul li,ol li {
+    margin-bottom: var(--listItemSpacing);
+}
+
+ul li:last-child,ol li:last-child {
+    margin-bottom: 0;
+}
+
+ul ul,ul ol,ol ul,ol ol {
+    margin-top: var(--listItemSpacing);
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 1.5em 1.5em;
+}
+
+img {
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
+}
+
+
+a {
+    -webkit-text-decoration: var(--textDecoration, none);
+    text-decoration: var(--textDecoration, none);
+    color: var(--genLinkColor);
+}
+
+a:hover {
+    color: var(--genLinkHoverColor);
+}
+
+figure {
+    margin: 1em 0;
+    /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+        tr {
+            th {
+                color: var(--primaryColor);
+                font-size: 1em;
+                font-weight: 600;
+                border-bottom: 1px solid var(--genborderColor);
+                padding: 1em 0;
+            } //th
+        } //tr
+    } //thead
+    tbody {
+        tr:first-child td {
+            padding-top: 20px;
+        }
+    }
+    th,
+    td {
+        text-align: left;
+        padding: 13px 0;
+        font-size: 0.9em;
+    } //td, th
+    tfoot{
+        border-top: 3px solid var(--genborderColor);
+    }
+}
+
+.wp-block-table{
+    tfoot{
+        border-top: 3px solid var(--genborderColor);
+    }
+}
+
+body,.cb__panel,[data-row],.cb__footer,.rt-floating-bar,.rt-account-form,.rt-trending-block,.cb__panel .mobile-menu-list,.cb__panel .mobile-menus, .footer-widgets-area,.rt-comments-container,.rt-related-posts-container,.hero-section[data-type="type-2"],[class*="rt-mega-menu"]>.sub-menu,[data-structure*="boxed"]>section,[data-structure="boxed"] .tutor-col-8 {
+    background-color: var(--background-color);
+    background-image: var(--overlay-color, none), var(--background-image);
+    background-size: var(--background-size);
+    background-repeat: var(--background-repeat);
+    background-position: var(--background-position);
+    background-attachment: var(--background-attachment);
+    --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+}
+
+html,h1,h2,h3,h4,h5,h6,pre,kbd,code,samp,label,figcaption,blockquote,blockquote p,.menu a,.cb__label ,.entry-meta,.widget-title,.contact-info,.rt-item-title,.rt-menu-badge,.entry-excerpt,.rt-post-title,.rt-breadcrumbs,.rt-header-text,.site-description,.page-description,.comment-reply-title,.cb__footer-copyright,.rt-language-switcher,.entry-summary .price,.rishi-breadcrumb-main-wrap .rishi-breadcrumbs,.rt-language-switcher ul[data-placement],.rt-widget>*:not(.widget-title) {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    font-weight: var(--fontWeight);
+    font-style: var(--fontStyle, inherit);
+    line-height: var(--lineHeight);
+    letter-spacing: var(--letterSpacing);
+    text-transform: var(--textTransform);
+    -webkit-text-decoration: var(--textDecoration);
+    text-decoration: var(--textDecoration);
+}
+
+.wp-block-quote.is-style-large p,.wp-block-pullquote p,.rt-quote-widget blockquote {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+code,kbd,samp,pre {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.sticky,.wp-caption,.wp-caption-text,.gallery-caption {
+    background: transparent;
+}
+
+.menu-item .cb__icon-container.rt-left {
+    margin-right: 0.5em;
+}
+
+.menu-item .cb__icon-container.rt-right {
+    margin-left: 0.5em;
+}
+
+[data-footer*="reveal"] .site-main {
+    background: inherit;
+}
+
+[data-device] {
+    position: relative;
+}
+
+/*** Typography setting ***/
+
+.site-title,.site-description{
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    font-style: var(--fontStyle, inherit);
+    font-weight: var(--fontWeight);
+    letter-spacing: var(--letterSpacing);
+    line-height: var(--lineHeight);
+    text-decoration: var(--textDecoration);
+    -webkit-text-decoration: var(--textDecoration);
+    text-transform: var(--textTransform);
+}
+
+
+.button,.added_to_cart,.cb__button-ghost,.wp-block-button__link,.wp-block-file .wp-block-file__button,.forminator-design--none .forminator-button,header button[type="submit"]:not(.qubely-block-btn-anchor) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--buttonMinHeight);
+    padding: var(--buttonPadding, 5px 20px);
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: var(--buttonBorderRadius);
+    @include transition(all ease 0.2s);
+}
+
+.button:disabled,.button.disabled,.submit:disabled,.submit.disabled,header .cb__button:disabled,header .cb__button.disabled,.added_to_cart:disabled,.added_to_cart.disabled,.cb__button-ghost:disabled,.cb__button-ghost.disabled,header input[type="submit"]:disabled,header input[type="submit"].disabled,.wp-block-button__link:disabled,.wp-block-button__link.disabled,.wp-block-file .wp-block-file__button:disabled,.wp-block-file .wp-block-file__button.disabled,.forminator-design--none .forminator-button:disabled,.forminator-design--none .forminator-button.disabled,header button[type="submit"]:not(.qubely-block-btn-anchor):disabled,header button[type="submit"]:not(.qubely-block-btn-anchor).disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 479.98px) {
+    .button,.submit,.cb__button,.added_to_cart,.cb__button-ghost,input[type="submit"],.wp-block-button__link,.wp-block-file .wp-block-file__button,.forminator-design--none .forminator-button,button[type="submit"]:not(.qubely-block-btn-anchor) {
+        --padding: 5px 15px;
+    }
+}
+
+.cb__button-ghost,div.is-style-outline>.wp-block-button__link {
+    border-width: 2px;
+    border-style: solid;
+    color: var(--buttonTextInitialColor);
+    background-color: transparent;
+    border-color: var(--headerButtonBorderColor);
+}
+
+.cb__button-ghost:hover,div.is-style-outline>.wp-block-button__link:hover {
+    color: var(--buttonTextHoverColor);
+    border-color: var(--headerButtonBorderHoverColor);
+}
+
+.button,.cb__button,.added_to_cart,.cb__button-ghost,.wp-block-button__link,.wp-block-file .wp-block-file__button,.forminator-design--none .forminator-button,button[type="submit"]:not(.qubely-block-btn-anchor) {
+    color: var(--buttonTextInitialColor);
+    background-color: var(--buttonInitialColor);
+    border-color: var(--buttonInitialColor);
+    font-family: var(--btnFontFamily);
+    font-size: var(--btnFontSize);
+    font-weight: var(--btnFontWeight);
+    font-style: var(--btnFontStyle);
+    line-height: var(--btnLineHeight);
+    letter-spacing: var(--btnLetterSpacing);
+    text-transform: var(--btnTextTransform);
+    -webkit-text-decoration: var(--btnTextDecoration);
+    text-decoration: var(--btnTextDecoration);
+    position: relative;
+    z-index: 1;
+}
+
+.button:hover, .submit:hover, .cb__header-cta .cb__button:hover,.added_to_cart:hover, input[type="submit"]:hover,.wp-block-file .wp-block-file__button:hover,div:not(.is-style-outline)>.wp-block-button__link:hover,.forminator-design--none .forminator-button:hover, button[type="submit"]:not(.qubely-block-btn-anchor):hover {
+    color: var(--buttonTextHoverColor);
+    background-color: var(--buttonHoverColor);
+    border-color: var(--buttonHoverColor);
+}
+
+[data-middle="search-input"] {
+    --middle-column-width: var(--search-box-max-width, 50%);
+}
+
+[data-placements] {
+    display: grid;
+}
+
+[data-placements="2"] {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+[data-column="middle"]>[data-items] {
+    justify-content: center;
+}
+
+[data-column="start"]>[data-items="secondary"] {
+    justify-content: flex-end;
+}
+
+[data-column="end"]>[data-items="primary"] {
+    justify-content: flex-end;
+}
+
+[data-items]>* {
+    margin: var(--margin, 0 10px);
+}
+
+[data-column="start"] [data-items="primary"]>*:first-child {
+    --margin: 0 10px 0 0;
+}
+
+[data-column="end"] [data-items="primary"]>*:last-child {
+    --margin: 0 0 0 10px;
+}
+
+[data-label="bottom"] {
+    flex-direction: column;
+}
+
+[data-label="bottom"] .cb__label  {
+    order: 2;
+    margin-top: 0.15em;
+}
+
+[data-label="left"] .cb__label  {
+    margin-right: 0.7em;
+}
+
+[data-label="right"] .cb__label  {
+    order: 2;
+    margin-left: 0.7em;
+}
+
+[class*="cb__container"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cb__container,.rt-container-narrow {
+    max-width: var(--containerWidth);
+    width: 100%;
+}
+
+footer .cb__container{
+    padding: 0 15px;
+}
+
+@media (max-width: 689.98px) {
+    .cb__container-fluid {
+        width: 100vw;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 690px) and (max-width: 999.98px) {
+    .cb__container-fluid {
+        width: 100vw;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .cb__container-fluid {
+        width: calc(100vw - 100px);
+    }
+}
+
+.cb__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+        position: relative;
+        width: var(--icon-size, 15px);
+        height: var(--icon-size, 15px);
+        fill: var(--icon-color, var(--color));
+        transition: fill 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+
+[data-icons-type*=":"] {
+    --icon-container-size: calc(var(--icon-size, 15px) * 2.5);
+}
+
+[data-icons-type*=":"] .cb__icon-container {
+    width: var(--icon-container-size);
+    height: var(--icon-container-size);
+    border-radius: var(--border-radius);
+    transition: all 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955), border-color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+[data-icons-type*="square"] {
+    --border-radius: 2px;
+}
+
+[data-icons-type*="rounded"] {
+    --border-radius: 100%;
+}
+
+[data-icons-type]>*:hover .cb__icon-container {
+    color: var(--icon-hover-color, var(--paletteColor2));
+}
+
+[data-icons-type*="solid"] .cb__icon-container {
+    background-color: var(--background-color);
+}
+
+[data-icons-type*="solid"]>*:hover .cb__icon-container {
+    background-color: var(--background-hover-color);
+}
+
+[data-icons-type*="outline"] .cb__icon-container {
+    border: 1px solid var(--background-color);
+}
+
+[data-icons-type*="outline"]>*:hover .cb__icon-container {
+    border-color: var(--background-hover-color);
+}
+
+/****** Image Container **********/
+
+[class*="rt-image-container"] {
+    display: inline-flex;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    [class*="rt-ratio"] {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+    }
+}
+
+.rt-image-container {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    img,picture{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        -o-object-fit: var(--object-fit, cover);
+        object-fit: var(--object-fit, cover);
+        -o-object-position: var(--object-position, 50% 50%);
+        object-position: var(--object-position, 50% 50%);
+    }
+}
+
+/*** End Image Container ***/
